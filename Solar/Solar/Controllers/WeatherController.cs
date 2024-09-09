@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Solar.Data;
 using Solar.Services;
 
 namespace Solar.Controllers;
@@ -9,19 +10,27 @@ namespace Solar.Controllers;
 
 public class WeatherController : ControllerBase
 {
-    private readonly IJsonParser _jsonParser;
     private readonly IWeatherService _weatherService;
+    private readonly IJsonParser _jsonParser;
+    private readonly ICityRepository _cityRepository;
 
-    public WeatherController(IWeatherService weatherService, IJsonParser iJsonParser)
+    public WeatherController(IWeatherService weatherService, IJsonParser iJsonParser, ICityRepository cityRepository)
     {
         _weatherService = weatherService;
         _jsonParser = iJsonParser;
+        _cityRepository = cityRepository;
     }
 
     [HttpGet("times")]
 
     public async Task<ActionResult<SunTimes>> GetTimes(string cityName)
     {
+        var city = _cityRepository.GetByName(cityName);
+        
+        if (city == null)
+        {
+            return NotFound($"The city: {city.Name} not found");
+        }
 
         try
         {

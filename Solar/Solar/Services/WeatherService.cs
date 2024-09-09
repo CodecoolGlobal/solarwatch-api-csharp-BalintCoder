@@ -20,7 +20,7 @@ public class WeatherService : IWeatherService
 
     public async Task<string> GetLetLng(string cityName)
     {
-        var apiKey = "f778716bc3508229848e8235af6fca4e";
+        var apiKey = Environment.GetEnvironmentVariable("WEATHER_API_KEY");
         var url = $"http://api.openweathermap.org/geo/1.0/direct?q={cityName}&appid={apiKey}";
 
         using var client = new HttpClient();
