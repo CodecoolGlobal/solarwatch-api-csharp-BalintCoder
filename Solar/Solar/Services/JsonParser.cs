@@ -1,25 +1,38 @@
 using System.Globalization;
 using System.Text.Json;
+using Microsoft.AspNetCore.Authentication;
 
 namespace Solar.Services;
 
 public class JsonParser : IJsonParser
 {
-    public (double, double) ParseCordJson(string json)
+    public City ParseCityJson(string json)
     {
         var document = JsonDocument.Parse(json);
 
         var city = document.RootElement[0];
 
-        var lat = city.GetProperty("lat").GetDouble();
-        
-        var lng = city.GetProperty("lon").GetDouble();
+        var name = city.GetProperty("name").GetString();
 
-        return (lat, lng);
+        var lat = city.GetProperty("lat").GetDouble();
+
+        var lng = city.GetProperty("lon").GetDouble();
+        
+        var state = city.TryGetProperty("state", out var stateProperty) ? stateProperty.GetString() : null; // Handle null state
+        var country = city.GetProperty("country").GetString();
+
+        return new City
+        {
+            Name = name ?? string.Empty,
+            Latitude = lat,
+            Longitude = lng,
+            State = state,
+            Country = country ?? string.Empty
+        };
 
     }
 
-    public SunTimes ParseSunriseSunSetJson(string json, string cityName)
+    public SunTimes ParseSunriseSunSetJson(string json, int cityId)
     {
         var document = JsonDocument.Parse(json);
         
@@ -31,11 +44,12 @@ public class JsonParser : IJsonParser
 
         return new SunTimes()
         {
-            City = cityName,
-            Date = DateOnly.FromDateTime(DateTime.Now),
+            
+            Date = DateTime.Now,
             Sunrise = sunrise,
             Sunset = sunset,
-            TimeZone = timezone
+            TimeZone = timezone,
+            CityId = cityId
         };
     }
 }

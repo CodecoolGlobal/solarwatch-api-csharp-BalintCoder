@@ -29,19 +29,16 @@ public class WeatherController : ControllerBase
         
         if (city == null)
         {
-            return NotFound($"The city: {city.Name} not found");
+            var latlngJson = await _weatherService.GetLetLng(cityName);
+
+            city = _jsonParser.ParseCityJson(latlngJson);
+            _cityRepository.Add(city);
         }
 
         try
         {
-            var LatlngJson = await  _weatherService.GetLetLng(cityName);
-
-            (double lat, double lon) =   _jsonParser.ParseCordJson(LatlngJson);
-
-
-            var sunRiseSunSetJson = await _weatherService.GetSunriseAndSunset(lat, lon);
-
-            return Ok(_jsonParser.ParseSunriseSunSetJson(sunRiseSunSetJson, cityName));
+            var sunriseSunsetJson = await _weatherService.GetSunriseAndSunset(city.Latitude, city.Longitude);
+            return Ok(_jsonParser.ParseSunriseSunSetJson(sunriseSunsetJson, city.Id));
 
         }
         catch (Exception e)

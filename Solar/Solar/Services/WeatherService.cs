@@ -14,6 +14,7 @@ public class WeatherService : IWeatherService
 
         using var client = new HttpClient();
         var response = await client.GetAsync(url);
+        Console.WriteLine(response.Content);
         response.EnsureSuccessStatusCode();
         return await response.Content.ReadAsStringAsync();
     }
@@ -25,6 +26,7 @@ public class WeatherService : IWeatherService
 
         using var client = new HttpClient();
         var response = await client.GetAsync(url);
+        Console.WriteLine(response.Content);
         response.EnsureSuccessStatusCode();
         return await response.Content.ReadAsStringAsync();
     }
