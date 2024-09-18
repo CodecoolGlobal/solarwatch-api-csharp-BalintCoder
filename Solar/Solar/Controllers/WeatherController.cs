@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Solar.Data;
 using Solar.Services;
@@ -21,7 +22,7 @@ public class WeatherController : ControllerBase
         _cityRepository = cityRepository;
     }
 
-    [HttpGet("times")]
+    [HttpGet("times"), Authorize(Roles = "User, Admin")]
 
     public async Task<ActionResult<SunTimes>> GetTimes(string cityName)
     {
@@ -46,6 +47,12 @@ public class WeatherController : ControllerBase
             return NotFound(e.Message);
         }
         
+    }
+    
+    [HttpGet("GetWeatherForecast"), Authorize(Roles = "Admin")]
+    public ActionResult<string> Something(string asd)
+    {
+        return Ok(asd);
     }
     
 }

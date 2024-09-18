@@ -7,7 +7,7 @@ public class WeatherApiContext : DbContext
     public DbSet<City> Cities { get; set; }
     public DbSet<SunTimes> SunTimes { get; set; }
 
-    public WeatherApiContext(DbContextOptions options) : base(options)
+    public WeatherApiContext(DbContextOptions<WeatherApiContext> options) : base(options)
     {
     }
 
