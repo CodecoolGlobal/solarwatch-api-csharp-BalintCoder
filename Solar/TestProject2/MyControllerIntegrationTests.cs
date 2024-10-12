@@ -79,7 +79,7 @@ public class MyControllerIntegrationTests
         using var scope = _app.Services.CreateScope();
         var userContext = scope.ServiceProvider.GetRequiredService<UsersContext>();
 
-        // Arrange: Add a test user
+        
         var testUser = new IdentityUser
         {
             UserName = "testuserdelete",
@@ -89,13 +89,13 @@ public class MyControllerIntegrationTests
         userContext.Users.Add(testUser);
         userContext.SaveChanges();
 
-        // Act: Delete the user
+        
         userContext.Users.Remove(testUser);
         userContext.SaveChanges();
 
-        // Assert: Verify the user has been deleted
+        
         var retrievedUser = userContext.Users.FirstOrDefault(u => u.Email == "deleteuser@example.com");
-        Assert.Null(retrievedUser); // Assert that the user is not found
+        Assert.Null(retrievedUser); 
     }
 
   
