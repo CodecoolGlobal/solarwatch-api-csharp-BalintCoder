@@ -115,6 +115,4 @@ Once the API is running, you can access the documentation at `http://localhost:5
 
 Contributions are welcome! Please create a pull request or open an issue for any enhancements or bugs you encounter.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
