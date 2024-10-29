@@ -36,7 +36,6 @@ The Solar API is a .NET backend service that provides weather-related informatio
 
 1. **Clone the repository**:
    ```bash
-   git clone git clone https://github.com/yourusername/solar.git
    cd solar
    cd solar
    ```
