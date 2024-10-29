@@ -109,8 +109,5 @@ Once the API is running, you can access the documentation at `http://localhost:5
 - `GET /weather/times`: Fetches sunrise and sunset times for a specified city (accessible to User and Admin roles)
 - `GET /weather/GetWeatherForecast`: Returns weather forecast data (accessible to Admin role)
 
-## Contributing
-
-Contributions are welcome! Please create a pull request or open an issue for any enhancements or bugs you encounter.
 
 
