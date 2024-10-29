@@ -12,7 +12,6 @@ The Solar API is a .NET backend service that provides weather-related informatio
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
