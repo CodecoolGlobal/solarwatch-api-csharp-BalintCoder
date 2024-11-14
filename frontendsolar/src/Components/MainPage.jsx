@@ -11,21 +11,21 @@ export default function MainPage() {
         try {
             const response = await fetch(`/api/Weather/times?cityName=${cityName}`, {
                 method: "GET",
-                headers: {
-                    Authorization: 'something'
-                },
             });
 
             if (!response.ok) {
+                console.error("Response Error:", response.status, response.statusText); // Log response details
                 throw new Error("City not found");
             }
 
             const data = await response.json();
+            console.log("Fetched Data:", data); // Log the fetched data
             setCityDetails(data);
-            setError(null); 
+            setError(null);
         } catch (err) {
+            console.error("Fetch Error:", err); // Log fetch errors
             setError(err.message);
-            setCityDetails(null); 
+            setCityDetails(null);
         }
     };
 

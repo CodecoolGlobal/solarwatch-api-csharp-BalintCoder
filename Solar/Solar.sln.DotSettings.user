@@ -1,11 +1,6 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f5ee9e3f_002D359e_002D45ce_002Dba75_002D62056ec4df3b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestEndPoint" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::1725F412-7D80-449D-827A-A80EA9AFAC27::net8.0::TestProject2.MyControllerIntegrationTests.TestUserExistsInDatabase&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::1725F412-7D80-449D-827A-A80EA9AFAC27::net8.0::TestProject2.MyControllerIntegrationTests.TestAddingAndRetrevingUser&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::1725F412-7D80-449D-827A-A80EA9AFAC27::net8.0::TestProject2.MyControllerIntegrationTests.GetUsersEndpoint_ReturnsSuccess&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::1725F412-7D80-449D-827A-A80EA9AFAC27::net8.0::TestProject2.MyControllerIntegrationTests.GetTimes_ValidCityName_ReturnsOk&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::1725F412-7D80-449D-827A-A80EA9AFAC27::net8.0::TestProject2.MyControllerIntegrationTests.TestUpdatingUserEmail&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::1725F412-7D80-449D-827A-A80EA9AFAC27::net8.0::TestProject2.MyControllerIntegrationTests.TestDeletingUser&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1725F412-7D80-449D-827A-A80EA9AFAC27::net8.0::TestProject2.MyControllerIntegrationTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
