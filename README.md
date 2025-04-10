@@ -126,4 +126,7 @@ Once the API is running, you can access the documentation at `http://localhost:5
 - `GET /weather/GetWeatherForecast`: Returns weather forecast data (accessible to Admin role)
 
 
+## Contributing
+[![BalintCoder's GitHub Profile](https://img.shields.io/badge/GitHub-BalintCoder-blue?style=for-the-badge&logo=github&logoColor=white)](https://github.com/BalintCoder)
+
 
