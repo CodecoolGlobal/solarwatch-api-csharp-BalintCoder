@@ -23,13 +23,29 @@ The Solar API is a .NET backend service that provides weather-related informatio
 
 ## Technologies
 
-- .NET 8.0
-- ASP.NET Core
-- Entity Framework Core
-- Microsoft SQL Server
-- JWT Authentication
-- Swagger for API documentation
-- HttpClient for external API requests
+<div align="center">
+  <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0" target="_blank" style="text-decoration:none;">
+    <img src="https://img.shields.io/badge/.NET-8.0-blueviolet?style=for-the-badge&logo=.net" alt=".NET 8.0 Badge"/>
+  </a>
+  <a href="https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-8.0" target="_blank" style="text-decoration:none;">
+    <img src="https://img.shields.io/badge/ASP.NET%20Core-8.0-blue?style=for-the-badge&logo=dotnet" alt="ASP.NET Core Badge"/>
+  </a>
+  <a href="https://learn.microsoft.com/en-us/ef/core/" target="_blank">
+    <img src="https://img.shields.io/badge/Entity%20Framework%20Core-ORM-green?style=for-the-badge&logo=dotnet" alt="EF Core Badge"/>
+  </a>
+  <a href="https://www.microsoft.com/en-us/sql-server" target="_blank">
+    <img src="https://img.shields.io/badge/SQL%20Server-Database-red?style=for-the-badge&logo=microsoftsqlserver" alt="SQL Server Badge"/>
+  </a>
+  <a href="https://jwt.io/" target="_blank">
+    <img src="https://img.shields.io/badge/JWT-Authentication-orange?style=for-the-badge&logo=jsonwebtokens" alt="JWT Badge"/>
+  </a>
+  <a href="https://swagger.io/tools/swagger-ui/" target="_blank">
+    <img src="https://img.shields.io/badge/Swagger-API%20Docs-green?style=for-the-badge&logo=swagger" alt="Swagger Badge"/>
+  </a>
+  <a href="https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?view=net-8.0" target="_blank">
+    <img src="https://img.shields.io/badge/HttpClient-API%20Requests-lightgrey?style=for-the-badge&logo=.net" alt="HttpClient Badge"/>
+  </a>
+</div>
 
 ## Installation
 
@@ -101,7 +117,7 @@ Once the API is running, you can access the documentation at `http://localhost:5
 
 ### Authentication
 
-- `POST /auth/register`: Registers a new user
+- `POST /auth/register`: Registers a new user `ű
 - `POST /auth/login`: Authenticates a user and returns a JWT token
 
 ### Weather
